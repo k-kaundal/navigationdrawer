@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.os.Bundle;
@@ -50,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
 
+                drawerLayout.closeDrawer(GravityCompat.START);
+
                 return true;
             }
         });
@@ -62,9 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.home:
-
+//                drawerLayout.closeDrawer(GravityCompat.START);
+//                drawerLayout.closeDrawer(GravityCompat.START,true);
                 break;
         }
+
 
 
         return super.onOptionsItemSelected(item);
